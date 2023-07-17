@@ -19,7 +19,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 100px;
+  padding: 40px 100px 0 100px;
 }
 header nav {
   width: -moz-fit-content;
@@ -34,6 +34,7 @@ header nav ul {
 header nav ul a {
   color: #333;
   font-weight: 600;
+  transition: 0.3s;
 }
 header nav ul a:hover {
   text-decoration: underline;
@@ -43,27 +44,28 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 300px;
 }
 main section {
+  display: flex;
   width: 600px;
   height: -moz-fit-content;
   height: fit-content;
+  gap: 300px;
 }
-main section h1 {
-  font-size: 4em;
+main section .main-content h1 {
+  font-size: 3em;
   color: #333;
   line-height: 65px;
   font-weight: 800;
 }
-main section h1 span {
+main section .main-content h1 span {
   color: #017143;
 }
-main section p {
-  font-size: 1.2em;
-  padding: 35px 0;
+main section .main-content p {
+  margin-bottom: 40px;
 }
-main section a {
+main section .main-content button {
+  border: none;
   text-transform: uppercase;
   color: white;
   font-weight: 500;
@@ -88,6 +90,10 @@ main .thumb li {
   display: inline-block;
   margin: 0 40px;
   cursor: pointer;
+  transition: 0.3s;
+}
+main .thumb li:hover {
+  transform: translateY(-15px);
 }
 main .thumb li img {
   max-width: 60px;

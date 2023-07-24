@@ -8,6 +8,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: $poppins;
+    color: $gray;
 }
 
 // todas as listas
@@ -18,6 +19,16 @@ ul{
 // todos os links
 a{
     text-decoration: none;
+}
+
+.circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $green;
+    clip-path: circle(600px at right 800px);
 }
 
 header{
@@ -38,7 +49,7 @@ header{
             a{
                 color: $gray;
                 font-weight: 600;
-                transition: 0.3s;
+                transition: 0.5s;
 
                 &:hover{
                     text-decoration: underline;
@@ -49,52 +60,54 @@ header{
 }
 
 main{
+    padding: 0 100px;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    section{
-        display: flex;
-        width: 600px;
-        height: fit-content;
-        gap: 300px;
-
-        .main-content{
-            h1{
-            font-size: 3em;
-            color: $gray;
+    .text-box{
+        width: 580px;
+        margin-right: 260px;
+        
+        h1{
+            font-weight: 500;
+            font-size: 4em;
             line-height: 65px;
-            font-weight: 800;
+        }
 
-            span{
-                color: $green;
-            }
+        span{
+            color: $green;
+            font-weight: bolder;
         }
 
         p{
-            margin-bottom: 40px;
+            padding: 20px 0 40px 0;
+            text-align: justify;
         }
 
-        button{
-            border: none;
-            text-transform: uppercase;
-            color: white;
-            font-weight: 500;
+        a{
             background-color: $green;
-            padding: 14px;
-            border-radius: 40px;    
-        }
-        }
+            color: white;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 600;
 
-        
+            &:hover{
+                background: transparent;
+                color: $green;
+                border: 2px $green solid;
+            }
+        }
     }
 
-    .image{
+    .coffee-box{
         width: fit-content;
-        height: fit-content;
+        margin-right: 50px;
     }
 
-    .thumb{
+    .select-coffee{
         position: absolute;
         left: 50%;
         bottom: 20px;
@@ -103,9 +116,9 @@ main{
 
         li{
             display: inline-block;
-            margin: 0 40px;
+            margin: 0 20px;
             cursor: pointer;
-            transition: 0.3s;
+            transition: 0.5s;
 
             &:hover{
                 transform: translateY(-15px);
@@ -115,6 +128,28 @@ main{
                 max-width: 60px;
             }
         }
+    }
 
+    .networks{
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        li a{
+            display: inline-block;
+            margin: 5px 0;
+            transform: scale(0.6);
+            filter: invert(1);
+
+            &:hover{
+                transition: 0.4s;
+                scale: (1.5);
+                filter: none;
+            }
+        }
     }
 }
